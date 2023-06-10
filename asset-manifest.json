@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/coinsage/static/css/main.86ddb073.css",
+    "main.js": "/coinsage/static/js/main.a434f9f1.js",
+    "static/js/787.2bce4009.chunk.js": "/coinsage/static/js/787.2bce4009.chunk.js",
+    "static/media/crypto.png": "/coinsage/static/media/crypto.0d0b1eff1777dc8e08c1.png",
+    "static/media/bg.jpg": "/coinsage/static/media/bg.a124cedcb52319bc1397.jpg",
+    "index.html": "/coinsage/index.html",
+    "main.86ddb073.css.map": "/coinsage/static/css/main.86ddb073.css.map",
+    "main.a434f9f1.js.map": "/coinsage/static/js/main.a434f9f1.js.map",
+    "787.2bce4009.chunk.js.map": "/coinsage/static/js/787.2bce4009.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86ddb073.css",
+    "static/js/main.a434f9f1.js"
+  ]
+}
