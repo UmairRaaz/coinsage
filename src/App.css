@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main{
+  background-color: #030303;
   min-height: 100vh;
+}
+.container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loading{
+  height: 92vh;
+  width: 100%;
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
+#effect{
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+#effect.display{
+  visibility: visible;
+}
+@keyframes spin{
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+.product-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  background-color: #29292a;
+  color: white;
+}
+
+.product-card img {
+  width: 50px;
+  margin: 20px 0;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.pageScroll{
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  padding: 20px;
+  background-color: #030303;
+  gap: 15px;
+}
+.text{
+  color: white;
+  z-index: 1;
+  flex-basis: 50%;
+  margin-left: 50px;
+  text-align: left;
+}
+.text p {
+  margin-top: 30px;
+}
+
+
+/* Animated Image for Home Page  */
+.image-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.animated-image {
+  animation: upAndDown 2s infinite ease-in-out;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the distance of animation */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Animated Image for Home Page  */
+
+@media screen and (max-width: 640px) {
+  .product-card {
+    flex-basis: 75%;
+  }
+  .image-container {
+    flex-direction: column;
+  }
+  .image-container img{
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+  }
+  .image-container .text{
+    margin-top: 50px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1007px)  {
+  .product-card {
+    flex-basis: 30%;
+  }
+  .image-container img{
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+  }
+  .image-container {
+    padding-top: 100px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .text .btn{
+    margin: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .product-card {
+    flex-basis: 20%;
+  }
+  .image-container {
+    flex-direction: row;
+  }
+  .text .btn{
+    margin: 10px 10px;
+  }
+  
 }
