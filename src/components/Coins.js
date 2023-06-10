@@ -18,7 +18,6 @@ const Coins = () => {
         console.error('Error fetching data:', error);
       });
   }, [pageNo])
-  console.log(coin)
   return (
     <>
       

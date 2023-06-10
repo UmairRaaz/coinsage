@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import backgroundImage from '../images/bg.jpg';
-import crypto from '../images/crypto.png'
+import crypto from '../images/crypto.png';
+
+
 const Home = () => {
   return (
+    <>
     <div
       style={{
         position: 'relative',
@@ -43,6 +46,7 @@ const Home = () => {
         
       </div>
     </div>
+    </>
   );
 }
 

@@ -4,14 +4,14 @@ const Exchanges = () => {
     let url = "https://api.coingecko.com/api/v3/exchanges";
     const [coin, setcoin] = useState([])
     useEffect(() => {
-        setTimeout(()=>{
-            fetch(url)
+
+        fetch(url)
             .then((response) => response.json())
             .then((data) => setcoin(data))
             .catch((error) => {
                 console.error('Error fetching data:', error);
-              });
-        },3000)
+            });
+
     }, [])
 
     return (
